@@ -1,0 +1,90 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+# Mathematics Operation
+```{r}
+print(12+3) # Addition
+print(12-3) # Subtraction
+print(12*3) # Multiplication
+print(12/3) # Division
+print(12**3) # Power
+print(12%%5) # Modulo
+print(log(1000)) # Logarithm
+print(sqrt(81)) # Square Root
+print(exp(5)) # e^n
+```
+
+# Variables Initialization
+```{r}
+x <- 6
+y <- 4
+x + y
+rm(x) # Delete variable X
+rm(y) # Delete variable Y
+```
+
+# Vector
+## Initialize Vector
+```{r}
+numbers <- c(5,8,12,4,3)
+print(numbers)
+numbers + 10
+numbers * 2
+numbers + c(2,3,4,5,6)
+```
+## Access Element in vector (Index start at 1 and include the last)
+```{r}
+numbers
+numbers[1]
+numbers[1:3]
+numbers[3:4]
+```
+
+## Ascending Number Range
+
+```{r}
+1:5
+```
+
+## Sum and Mean
+```{r}
+sum(1:5)
+mean(1:5)
+```
+
+# Data Types
+
+- numeric (Real number)
+- character (String)
+- Logical (Boolean TRUE,FALSE)
+- factor (Categorical in Statistics)
+
+```{r}
+animals <- c("Dog","Cat","Dog","Dog")
+class(animals) # check data type
+is.character(animals) # check animals is character or not
+animals
+animals <- as.factor(animals) # cast animals to factor data
+class(animals)
+is.factor(animals) # check animal is factor or not
+animals
+```
+
+# Data Frame
+```{r}
+studentIds <- c("62001","62002","62003","62004","62005")
+scores <- c(60,72,84,77,68)
+df <- data.frame(studentIds,scores)
+print(df)
+```
+
+```{r}
+str(df)
+head(df)
+tail(df)
+```
+```{r}
+summary(df)
+```
